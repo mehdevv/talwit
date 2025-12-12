@@ -1,0 +1,9 @@
+.app {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #E8F4F8 0%, #F0F9FA 100%);
+  position: relative;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}

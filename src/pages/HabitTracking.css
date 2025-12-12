@@ -1,0 +1,270 @@
+.habit-tracking-page {
+  width: 100%;
+  height: 100%;
+  padding: var(--spacing-md);
+  padding-bottom: calc(60px + var(--spacing-md));
+  background: white;
+  overflow-y: auto;
+}
+
+/* Header */
+.habits-header {
+  margin-bottom: var(--spacing-xl);
+  padding-top: var(--spacing-sm);
+  text-align: center;
+}
+
+.habits-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+/* Streak Section */
+.streak-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xl);
+}
+
+.streak-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px var(--spacing-lg);
+  background: white;
+  border: 1px solid #E0E0E0;
+  border-radius: var(--border-radius);
+}
+
+.streak-badge svg {
+  flex-shrink: 0;
+}
+
+.streak-count {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.reset-timer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px var(--spacing-md);
+  background: white;
+  border: 1px solid #E0E0E0;
+  border-radius: var(--border-radius);
+}
+
+.reset-timer svg {
+  flex-shrink: 0;
+}
+
+.timer-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Habits List Section */
+.habits-list-section {
+  margin-bottom: var(--spacing-lg);
+}
+
+.habits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: white;
+  border-top: 1px solid #E0E0E0;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.habit-item {
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-md);
+  background: white;
+  border-bottom: 1px solid #E0E0E0;
+  transition: all 0.2s ease;
+}
+
+.habit-item-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.habit-item:last-child {
+  border-bottom: none;
+}
+
+.habit-item:active {
+  background: #F5F5F5;
+}
+
+.habit-item.complete {
+  background: rgba(102, 220, 220, 0.02);
+}
+
+.habit-item-left {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  flex: 1;
+}
+
+.habit-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F5F5F5;
+  border-radius: var(--border-radius-sm);
+  flex-shrink: 0;
+}
+
+.habit-icon-wrapper svg {
+  width: 24px;
+  height: 24px;
+}
+
+.habit-item-info {
+  flex: 1;
+}
+
+.habit-item-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.habit-item-progress {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.habit-item-right {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.progress-circle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.progress-circle svg {
+  width: 40px;
+  height: 40px;
+  transform: rotate(-90deg);
+}
+
+.progress-percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.habit-edit-btn {
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+.habit-edit-btn:active {
+  opacity: 0.6;
+}
+
+.habit-edit-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Habit Controls (shown when editing) */
+.habit-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  margin-top: var(--spacing-md);
+  border-top: 1px solid #E0E0E0;
+  width: 100%;
+}
+
+.control-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+  background: white;
+  color: var(--primary-color);
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.control-btn:active {
+  transform: scale(0.95);
+  background: var(--primary-color);
+  color: white;
+}
+
+.habit-value {
+  flex: 1;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Responsive */
+@media (max-width: 375px) {
+  .habits-header h1 {
+    font-size: 24px;
+  }
+
+  .habit-icon-wrapper {
+    width: 40px;
+    height: 40px;
+  }
+
+  .habit-icon-wrapper svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .habit-item-name {
+    font-size: 14px;
+  }
+}
